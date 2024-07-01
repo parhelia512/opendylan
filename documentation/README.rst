@@ -1,63 +1,70 @@
-This is the documentation for Open Dylan.
+This is the Open Dylan website.
 
-It is built using `Sphinx <http://sphinx.pocoo.org>`_. All content is written
-using ReStructured Text with Sphinx extensions.
+It is built using `Sphinx <https://www.sphinx-doc.org/>`_.  All content is
+written using ReStructured Text with Sphinx extensions.
 
 Preparation
 ===========
 
-Before building this documentation, you will need a copy of Sphinx
-installed. The latest versions of Sphinx use Python 3 so we assume Python 3 is
-in use here.  The easiest way to install Sphinx is to get it from the `Python
-Package Index <http://pypi.python.org/pypi/Sphinx>`_ or to use ``pip3``::
+Installing dependencies
+-----------------------
 
-  sudo pip3 install -U Sphinx
+Some system dependencies need to be satisfied first:
 
-On some systems it might be called just ``pip`` even when installing Python 3
-packages.
+- Python 3 and its package manager pip3.
+- Git
+- Make
 
-You also need to have the git submodule for our Sphinx extension populated.  If
-this is not present for you, do this at the top level of the opendylan
-repository::
+On a Debian-derivative, they're quite easy to fetch::
 
-  git submodule update --init --recursive
+    sudo apt install python3 python3-pip git make
+
+Now you need the Python dependencies. The easiest way to do this is to use
+``pip3``::
+
+    sudo pip3 install -U Sphinx furo
+
+You may also need ``python-dateutil``.
+
+    sudo pip3 install python-dateutil
+
+And ``sphinx-copybutton`` to show a copy button in code blocks::
+
+    sudo pip3 install sphinx-copybutton
+
 
 Building
 ========
 
-Building the documentation is easy on a system with ``make``. For example::
+Get the source if you haven't already::
 
-  cd library-reference && make html
+    git clone --recursive https://github.com/dylan-lang/opendylan
 
-On Windows, use ``make.bat`` instead::
+Building the website::
 
-  make.bat html
+    cd opendylan/documentation
+    mkdir -p /tmp/opendylan.org
+    ./update.sh /tmp/opendylan.org      # for testing
+    ./update.sh /var/www/opendylan.org  # for realz
 
-The generated documentation will be in ``build/html``.  Just viewing the HTML
-locally may not correctly load the CSS files.  A workaround is to cd into
-``build/html`` and run a web server.  For example::
+The generated site will be in ``_build/html`` and then copied to the output
+directory you specified, along with package docs and the DRM files.
 
-  python3 -m http.server
+If you are tweaking non-package doc pages you can test your changes by running
+``make html`` again, but the output will only be in ``_build/html``. **To build
+the full website you must use ``update.sh``.**
 
-or::
+Test your changes by running a web server::
 
-  python2 -m SimpleHTTPServer
+    python3 -m http.server --directory /tmp/opendylan.org   # or _build/html
 
-The pages can then be accessed via::
+or you can eat our own Dylan dogfood and run our HTTP server! ::
 
-  http://localhost:8000/index.html
-
-You can build other formats as well. Run ``make`` or ``make.bat`` without
-arguments to see the available formats.
-
-Note that to build the PDF files with ``make latexpdf`` it may be necessary (at
-least on Debian) to install these packages:
-
-*  latexmk
-*  texlive-latex-recommended
-*  texlive-fonts-recommended
-*  texlive-latex-extra
-
+    git clone --recursive https://github.com/dylan-lang/http
+    cd http
+    make install
+    cd ...back to website dir...
+    http-server --directory /tmp/opendylan.org   # or _build/html
 
 Link Validation
 ---------------
@@ -65,8 +72,22 @@ Link Validation
 Sphinx also makes it easy to check that all of the links to external sites
 are valid.  You can run the link checker by::
 
-    make linkcheck
+    make linkcheck | grep -v ' ok '
 
+Site Maintenance
+================
+
+#. Update the appropriate info on the download page when a new version of Open
+   Dylan is released.
+
+#. The :file:`update-opendylan.org.sh` script is run periodically via a systemd
+   timer to update the documentation in various repositories by essentially
+   doing a git pull and make html.
+
+   Note that the script copies the DRM's ``.html`` files to
+   ``/var/www/opendylan.org/books/drm/`` directly.
+   ``/var/www/opendylan.org/downloads/`` **is maintained by hand** so keep a
+   backup of it somewhere.
 
 Section Header Markup
 =====================
@@ -90,5 +111,5 @@ Dylan Language Markup
 =====================
 
 There is a `Dylan language Sphinx domain
-<https://github.com/dylan-lang/sphinx-extensions/blob/master/sphinxcontrib/dylan/domain/reference.rst>`_
-to make it easier to document and refer to Dylan language entities.
+<https://package.opendylan.org/sphinx-extensions/>`_ to make it easier to
+document and refer to Dylan language entities.

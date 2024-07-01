@@ -582,17 +582,10 @@ define method condition-to-string
 end method condition-to-string;
 
 define method condition-to-string
-    (condition :: <format-string-condition>) => (string :: <string>)
+    (condition :: <simple-condition>) => (string :: <string>)
   apply(format-to-string,
         condition-format-string(condition),
         condition-format-arguments(condition))
-end method condition-to-string;
-
-define method condition-to-string
-    (error :: <type-error>) => (string :: <string>)
-  format-to-string("%= is not of type %=",
-                   type-error-value(error),
-                   type-error-expected-type(error))
 end method condition-to-string;
 
 define method print-pretty-name
