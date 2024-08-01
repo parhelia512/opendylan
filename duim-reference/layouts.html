@@ -5,12 +5,13 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="DUIM-Gadgets Library" href="gadgets.html" /><link rel="prev" title="DUIM-Graphics Library" href="graphics.html" />
 
-    <link rel="shortcut icon" href="../_static/favicon.ico"/><!-- Generated with Sphinx 7.1.2 and Furo 2024.01.29 -->
+    <link rel="shortcut icon" href="../_static/favicon.ico"/><!-- Generated with Sphinx 7.1.2 and Furo 2024.07.18 -->
         <title>DUIM-Layouts Library - Open Dylan</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=613ab9ff" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
     
     
 
@@ -69,7 +70,7 @@
   <symbol id="svg-sun" viewBox="0 0 24 24">
     <title>Light mode</title>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
       <circle cx="12" cy="12" r="5"></circle>
       <line x1="12" y1="1" x2="12" y2="3"></line>
       <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -84,22 +85,63 @@
   <symbol id="svg-moon" viewBox="0 0 24 24">
     <title>Dark mode</title>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
     </svg>
   </symbol>
-  <symbol id="svg-sun-half" viewBox="0 0 24 24">
-    <title>Auto light/dark mode</title>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M13 12h5" />
-      <path d="M13 15h4" />
-      <path d="M13 18h1" />
-      <path d="M13 9h4" />
-      <path d="M13 6h1" />
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
     </svg>
   </symbol>
 </svg>
@@ -112,6 +154,8 @@
 <label class="overlay toc-overlay" for="__toc">
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
 
 
 
@@ -130,7 +174,8 @@
       <div class="theme-toggle-container theme-toggle-header">
         <button class="theme-toggle">
           <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
           <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
@@ -250,17 +295,26 @@
 <li class="toctree-l2"><a class="reference internal" href="../getting-started-cli/copyright.html">Copyright</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference external" href="https://opendylan.org/books/dpg/">Dylan Programming Guide</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://package.opendylan.org/dylan-programming-book/">Dylan Programming Guide</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://play.opendylan.org">Dylan Playground</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../documentation/cheatsheets/index.html">Cheat Sheets</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Cheat Sheets</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../documentation/cheatsheets/syntax.html">Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation/cheatsheets/conditionals.html">Conditionals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation/cheatsheets/collections.html">Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation/cheatsheets/iteration.html">Iteration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation/cheatsheets/scheme.html">For Schemers</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference external" href="https://opendylan.org/books/drm/">Dylan Reference Manual</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../library-reference/index.html">Open Dylan Libraries</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Open Dylan Libraries</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../library-reference/language-extensions/index.html">Dylan Language Extensions</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Dylan Language Extensions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1"><a class="reference external" href="https://package.opendylan.org/">Package Docs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../library-reference/index.html">Open Dylan Libraries</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Open Dylan Libraries</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../library-reference/language-extensions/index.html">Dylan Language Extensions</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Dylan Language Extensions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../library-reference/language-extensions/language-differences.html">Language Differences</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../library-reference/language-extensions/define-function.html">Function Definition</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../library-reference/language-extensions/for-iteration.html">Extensions to the FOR iteration construct</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../library-reference/language-extensions/for-iteration.html">Extensions to the FOR iteration macro</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../library-reference/language-extensions/weak-tables.html">Weak tables</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../library-reference/language-extensions/inlining.html">Inlining adjectives for methods, constants, functions, and slots</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../library-reference/language-extensions/numbers.html">Integers</a></li>
@@ -274,7 +328,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../library-reference/lid.html">LID File Format</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../library-reference/c-ffi/index.html">The c-ffi Library</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../library-reference/collections/index.html">The collections Library</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of The collections Library</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../library-reference/collections/index.html">The collections Library</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of The collections Library</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../library-reference/collections/bit-set.html">The bit-set Module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../library-reference/collections/bit-vector.html">The bit-vector Module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../library-reference/collections/collectors.html">The collectors Module</a></li>
@@ -284,7 +338,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../library-reference/coloring-stream/index.html">The coloring-stream Library</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../library-reference/common-dylan/index.html">The common-dylan Library</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of The common-dylan Library</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../library-reference/common-dylan/index.html">The common-dylan Library</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of The common-dylan Library</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../library-reference/common-dylan/byte-vector.html">The byte-vector Module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../library-reference/common-dylan/common-extensions.html">The common-extensions Module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../library-reference/common-dylan/machine-words.html">The machine-words Module</a></li>
@@ -295,14 +349,15 @@
 <li class="toctree-l3"><a class="reference internal" href="../library-reference/common-dylan/transcendentals.html">The transcendentals Module</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../library-reference/dispatch-profiler/index.html">The DISPATCH-PROFILER library</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../library-reference/dood/index.html">The DOOD library</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../library-reference/dylan/index.html">The dylan Library</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of The dylan Library</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../library-reference/dylan/index.html">The dylan Library</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of The dylan Library</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../library-reference/dylan/finalization.html">The finalization Module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../library-reference/dylan/primitives.html">The dylan-primitives Module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../library-reference/dylan/threads.html">The threads Module</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../library-reference/io/index.html">The io Library</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of The io Library</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../library-reference/io/index.html">The io Library</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of The io Library</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../library-reference/io/format.html">The format Module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../library-reference/io/format-out.html">The format-out Module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../library-reference/io/print.html">The print and pprint Modules</a></li>
@@ -313,7 +368,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../library-reference/network/index.html">The network Library</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../library-reference/progress-stream/index.html">The progress-stream Library</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../library-reference/sql/index.html">The sql Library</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../library-reference/system/index.html">The system Library</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of The system Library</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../library-reference/system/index.html">The system Library</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of The system Library</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../library-reference/system/date.html">The date Module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../library-reference/system/locators.html">The locators Module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../library-reference/system/file-system.html">The file-system Module</a></li>
@@ -325,9 +380,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../library-reference/copyright.html">Copyright</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="../documentation/index.html">All Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of All Documentation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../documentation/index.html">All Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle navigation of All Documentation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../news/index.html">News</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../documentation/cheatsheets/index.html">Cheat Sheets</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle navigation of Cheat Sheets</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../documentation/cheatsheets/index.html">Cheat Sheets</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle navigation of Cheat Sheets</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../documentation/cheatsheets/syntax.html">Syntax</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../documentation/cheatsheets/conditionals.html">Conditionals</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../documentation/cheatsheets/collections.html">Collections</a></li>
@@ -336,7 +391,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/publications.html">Publications</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../intro-dylan/index.html">Intro to Dylan</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle navigation of Intro to Dylan</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../intro-dylan/index.html">Intro to Dylan</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle navigation of Intro to Dylan</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../intro-dylan/why-dylan.html">Why Dylan?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../intro-dylan/expressions-variables.html">Expressions &amp; Variables</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../intro-dylan/methods-generic-functions.html">Methods &amp; Generic Functions</a></li>
@@ -347,7 +402,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../intro-dylan/copyright.html">Copyright</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../corba-guide/index.html">CORBA Guide</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle navigation of CORBA Guide</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../corba-guide/index.html">CORBA Guide</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle navigation of CORBA Guide</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../corba-guide/preface.html">Preface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../corba-guide/intro.html">About Open Dylan CORBA</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../corba-guide/getstart.html">Quick Start Tutorial</a></li>
@@ -361,7 +416,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../corba-guide/idl-app.html">An IDL Binding for Dylan</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../building-with-duim/index.html">DUIM Guide</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle navigation of DUIM Guide</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../building-with-duim/index.html">DUIM Guide</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle navigation of DUIM Guide</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../building-with-duim/preface.html">Preface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../building-with-duim/intro.html">Introduction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../building-with-duim/design.html">Designing A Simple DUIM Application</a></li>
@@ -374,7 +429,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../building-with-duim/copyright.html">Copyright</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">DUIM Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle navigation of DUIM Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">DUIM Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle navigation of DUIM Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="conventions.html">Conventions in this Manual</a></li>
 <li class="toctree-l3"><a class="reference internal" href="geom.html">DUIM-Geometry Library</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ext-geom.html">DUIM-Extended-Geometry Library</a></li>
@@ -387,7 +442,7 @@
 <li class="toctree-l3"><a class="reference internal" href="copyright.html">Copyright</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../getting-started-ide/index.html">Getting Started / IDE</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle navigation of Getting Started / IDE</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../getting-started-ide/index.html">Getting Started / IDE</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle navigation of Getting Started / IDE</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../getting-started-ide/preface.html">Preface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../getting-started-ide/quick-start.html">Quick Start</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../getting-started-ide/expanding.html">Fixing Bugs</a></li>
@@ -403,7 +458,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../getting-started-ide/copyright.html">Copyright</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../release-notes/index.html">Release Notes</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle navigation of Release Notes</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../release-notes/index.html">Release Notes</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle navigation of Release Notes</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../release-notes/2024.1.html">Open Dylan 2024.1</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../release-notes/2023.1.html">Open Dylan 2023.1</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../release-notes/2022.1.html">Open Dylan 2022.1</a></li>
@@ -417,6 +472,20 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../style-guide/index.html">Style Guide</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../history/index.html">Dylan History</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle navigation of Dylan History</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../history/apple-dylan/index.html">Apple Dylan</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle navigation of Apple Dylan</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../history/apple-dylan/apple-cambridge.html">Apple Cambridge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../history/apple-dylan/eulogy.html">Apple Dylan Eulogy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../history/apple-dylan/technology-release.html">Apple Dylan Technology Release</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../history/apple-dylan/today.html">Apple Dylan Today</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../history/apple-dylan/screenshots/browsers.html">Apple Dylan Screenshots - Browsers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../history/apple-dylan/screenshots/dynamic.html">Apple Dylan Screenshots - Dynamic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../history/apple-dylan/screenshots/index.html">Apple Dylan Screenshots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../history/apple-dylan/screenshots/misc.html">Apple Dylan Screenshots - Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Full Index</a></li>
@@ -439,19 +508,21 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="edit-this-page">
-  <a class="muted-link" href="https://github.com/dylan-lang/website/edit/master/source/duim-reference/layouts.rst" title="Edit this page">
-    <svg aria-hidden="true" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-      <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
-      <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
-    </svg>
+          <div class="view-this-page">
+  <a class="muted-link" href="https://github.com/dylan-lang/opendylan/blob/master/documentation/source/duim-reference/layouts.rst?plain=true" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div><div class="edit-this-page">
+  <a class="muted-link" href="https://github.com/dylan-lang/opendylan/edit/master/documentation/source/duim-reference/layouts.rst" title="Edit this page">
+    <svg><use href="#svg-pencil"></use></svg>
     <span class="visually-hidden">Edit this page</span>
   </a>
 </div><div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
               <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
@@ -461,11 +532,11 @@
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
-        <article role="main">
+        <article role="main" id="furo-main-content">
           <section id="duim-layouts-library">
-<h1>DUIM-Layouts Library<a class="headerlink" href="#duim-layouts-library" title="Permalink to this heading">#</a></h1>
+<h1>DUIM-Layouts Library<a class="headerlink" href="#duim-layouts-library" title="Permalink to this heading">¶</a></h1>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
 <p>The DUIM-Layouts library contains interfaces that define a number of
 layouts for use in your GUI applications, as well as the necessary
 functions, generic functions, and macros for creating, manipulating, and
@@ -479,11 +550,11 @@ expressed as a vector, and lays out those children according to certain
 constraints. Each child of a layout must be an instance of a DUIM class.</p>
 </section>
 <section id="the-class-hierarchy-for-duim-layouts">
-<h2>The class hierarchy for DUIM-Layouts<a class="headerlink" href="#the-class-hierarchy-for-duim-layouts" title="Permalink to this heading">#</a></h2>
+<h2>The class hierarchy for DUIM-Layouts<a class="headerlink" href="#the-class-hierarchy-for-duim-layouts" title="Permalink to this heading">¶</a></h2>
 <p>This section presents an overview of the available classes of layout,
 and describes the class hierarchy present.</p>
 <section id="the-layout-class-and-its-subclasses">
-<h3>The &lt;layout&gt; class and its subclasses<a class="headerlink" href="#the-layout-class-and-its-subclasses" title="Permalink to this heading">#</a></h3>
+<h3>The &lt;layout&gt; class and its subclasses<a class="headerlink" href="#the-layout-class-and-its-subclasses" title="Permalink to this heading">¶</a></h3>
 <p>The base class for the majority of DUIM layouts is the <a class="reference internal" href="#duim-layouts:duim-layouts:[layout]"><code class="xref dylan dylan-class docutils literal notranslate"><span class="pre">&lt;layout&gt;</span></code></a> class,
 which is itself a subclass of <a class="reference internal" href="sheets.html#duim-sheets:duim-sheets:[sheet]"><code class="xref dylan dylan-class docutils literal notranslate"><span class="pre">&lt;sheet&gt;</span></code></a>. All other layout-oriented
 classes are subclasses of <a class="reference internal" href="sheets.html#duim-sheets:duim-sheets:[sheet]"><code class="xref dylan dylan-class docutils literal notranslate"><span class="pre">&lt;sheet&gt;</span></code></a>.</p>
@@ -494,7 +565,7 @@ and <a class="reference internal" href="#duim-layouts:duim-layouts:[layout]"><co
 &lt;layout&gt;</a> for details of the subclasses of <a class="reference internal" href="#duim-layouts:duim-layouts:[layout]"><code class="xref dylan dylan-class docutils literal notranslate"><span class="pre">&lt;layout&gt;</span></code></a>.</p>
 <div class="table-wrapper docutils container" id="id1">
 <table class="docutils align-default" id="id1">
-<caption><span class="caption-text">Overall class hierarchy for the DUIM-Layouts library</span><a class="headerlink" href="#id1" title="Permalink to this table">#</a></caption>
+<caption><span class="caption-text">Overall class hierarchy for the DUIM-Layouts library</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <tbody>
 <tr class="row-odd"><td><p>&lt;sheet&gt;</p></td>
 <td></td>
@@ -563,11 +634,11 @@ used when no other more suitable class is available.</p></li>
 </ul>
 </section>
 <section id="subclasses-of-layout">
-<h3>Subclasses of &lt;layout&gt;<a class="headerlink" href="#subclasses-of-layout" title="Permalink to this heading">#</a></h3>
+<h3>Subclasses of &lt;layout&gt;<a class="headerlink" href="#subclasses-of-layout" title="Permalink to this heading">¶</a></h3>
 <p>The subclasses of <a class="reference internal" href="#duim-layouts:duim-layouts:[layout]"><code class="xref dylan dylan-class docutils literal notranslate"><span class="pre">&lt;layout&gt;</span></code></a> are shown in <a class="reference internal" href="#subclasses-of-the-layout-class"><span class="std std-ref">Subclasses of the &lt;layout&gt; class</span></a></p>
 <div class="table-wrapper docutils container" id="id2">
 <span id="subclasses-of-the-layout-class"></span><span id="subclasses-of-the-layout-class"></span><table class="docutils align-default" id="id2">
-<caption><span class="caption-text">Subclasses of the &lt;layout&gt; class</span><a class="headerlink" href="#id2" title="Permalink to this table">#</a></caption>
+<caption><span class="caption-text">Subclasses of the &lt;layout&gt; class</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
 <tbody>
 <tr class="row-odd"><td><p>&lt;layout&gt;</p></td>
 <td></td>
@@ -639,18 +710,18 @@ in which all the cells in the table are forced to be the same size.</p></li>
 <figure class="align-center" id="id3">
 <img alt="../_images/layouts-3.png" src="../_images/layouts-3.png" />
 <figcaption>
-<p><span class="caption-text">Column, row, and pinboard layouts</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Column, row, and pinboard layouts</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
 </section>
 <section id="duim-layouts-module">
-<h2>DUIM-Layouts Module<a class="headerlink" href="#duim-layouts-module" title="Permalink to this heading">#</a></h2>
+<h2>DUIM-Layouts Module<a class="headerlink" href="#duim-layouts-module" title="Permalink to this heading">¶</a></h2>
 <p>This section contains a complete reference of all the interfaces that
 are exported from the <em>duim-layouts</em> module.</p>
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:allocate-space">
-<span class="sig-name descname"><span class="pre">allocate-space</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:allocate-space" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">allocate-space</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:allocate-space" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allocates space within a layout for its children.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Signature<span class="colon">:</span></dt>
@@ -688,7 +759,7 @@ not call it. Call <a class="reference internal" href="#duim-layouts:duim-layouts
 
 <dl class="dylan class">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:[basic-user-pane]">
-<span class="sig-name descname"><span class="pre">&lt;basic-user-pane&gt;</span></span> <em class="property"><span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[basic-user-pane]" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">&lt;basic-user-pane&gt;</span></span> <em class="property"><span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[basic-user-pane]" title="Permalink to this definition">¶</a></dt>
 <dd><p>The class of basic user panes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Superclasses<span class="colon">:</span></dt>
@@ -738,7 +809,7 @@ by the author of the online help system.</p>
 
 <dl class="dylan class">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:[column-layout]">
-<span class="sig-name descname"><span class="pre">&lt;column-layout&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Instantiable</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[column-layout]" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">&lt;column-layout&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Instantiable</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[column-layout]" title="Permalink to this definition">¶</a></dt>
 <dd><p>The class of column layouts.</p>
 <dl class="field-list">
 <dt class="field-odd">Superclasses<span class="colon">:</span></dt>
@@ -823,7 +894,7 @@ half the vertical space, as shown in the diagram below.</p>
 
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:compose-space">
-<span class="sig-name descname"><span class="pre">compose-space</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:compose-space" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">compose-space</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:compose-space" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the amount of space required for a specified child of a
 composite pane.</p>
 <dl class="field-list simple">
@@ -873,7 +944,7 @@ but should not call it. Call <code class="docutils literal notranslate"><span cl
 
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:current-pane">
-<span class="sig-name descname"><span class="pre">current-pane</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:current-pane" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">current-pane</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:current-pane" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the current pane.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Signature<span class="colon">:</span></dt>
@@ -892,7 +963,7 @@ but should not call it. Call <code class="docutils literal notranslate"><span cl
 
 <dl class="dylan macro">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:definepane">
-<span class="sig-name descname"><span class="pre">define</span> <span class="pre">pane</span></span> <em class="property"><span class="pre">Defining</span> <span class="pre">Macro</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:definepane" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">define</span> <span class="pre">pane</span></span> <em class="property"><span class="pre">Defining</span> <span class="pre">Macro</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:definepane" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines a new class of DUIM pane.</p>
 <dl class="field-list">
 <dt class="field-odd">Macro Call<span class="colon">:</span></dt>
@@ -946,7 +1017,7 @@ new gadget, without actually creating a new class of <a class="reference interna
 
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:do-allocate-space">
-<span class="sig-name descname"><span class="pre">do-allocate-space</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:do-allocate-space" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">do-allocate-space</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:do-allocate-space" title="Permalink to this definition">¶</a></dt>
 <dd><p>Called by <a class="reference internal" href="#duim-layouts:duim-layouts:allocate-space"><code class="xref dylan dylan-gf docutils literal notranslate"><span class="pre">allocate-space</span></code></a> to calculate space
 requirements for a pane.</p>
 <dl class="field-list simple">
@@ -978,7 +1049,7 @@ add methods to this function, but not call it directly. Call
 
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:do-compose-space">
-<span class="sig-name descname"><span class="pre">do-compose-space</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:do-compose-space" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">do-compose-space</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:do-compose-space" title="Permalink to this definition">¶</a></dt>
 <dd><p>Called by <a class="reference internal" href="#duim-layouts:duim-layouts:compose-space"><code class="xref dylan dylan-gf docutils literal notranslate"><span class="pre">compose-space</span></code></a> to calculate space
 requirements for a child.</p>
 <dl class="field-list">
@@ -1044,7 +1115,7 @@ you should not call <code class="docutils literal notranslate"><span class="pre"
 
 <dl class="dylan class">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:[drawing-pane]">
-<span class="sig-name descname"><span class="pre">&lt;drawing-pane&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Instantiable</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[drawing-pane]" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">&lt;drawing-pane&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Instantiable</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[drawing-pane]" title="Permalink to this definition">¶</a></dt>
 <dd><p>The class of drawing panes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Superclasses<span class="colon">:</span></dt>
@@ -1077,7 +1148,7 @@ pane. This gets called by the <a class="reference internal" href="sheets.html#du
 
 <dl class="dylan constant">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:$fill">
-<span class="sig-name descname"><span class="pre">$fill</span></span> <em class="property"><span class="pre">Constant</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:$fill" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">$fill</span></span> <em class="property"><span class="pre">Constant</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:$fill" title="Permalink to this definition">¶</a></dt>
 <dd><p>Default value for width and height init-keywords for layout panes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -1107,7 +1178,7 @@ or <code class="docutils literal notranslate"><span class="pre">min-height:</spa
 
 <dl class="dylan class">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:[fixed-layout]">
-<span class="sig-name descname"><span class="pre">&lt;fixed-layout&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Instantiable</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[fixed-layout]" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">&lt;fixed-layout&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Instantiable</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[fixed-layout]" title="Permalink to this definition">¶</a></dt>
 <dd><p>The class of fixed layouts.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Superclasses<span class="colon">:</span></dt>
@@ -1140,7 +1211,7 @@ every child in the layout should be.</p>
 
 <dl class="dylan class">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:[grid-layout]">
-<span class="sig-name descname"><span class="pre">&lt;grid-layout&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Instantiable</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[grid-layout]" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">&lt;grid-layout&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Instantiable</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[grid-layout]" title="Permalink to this definition">¶</a></dt>
 <dd><p>The class of grid layouts.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Superclasses<span class="colon">:</span></dt>
@@ -1173,7 +1244,7 @@ preferred space requirement for any individual cell in the grid layout.</p>
 
 <dl class="dylan macro">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:horizontally">
-<span class="sig-name descname"><span class="pre">horizontally</span></span> <em class="property"><span class="pre">Statement</span> <span class="pre">Macro</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:horizontally" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">horizontally</span></span> <em class="property"><span class="pre">Statement</span> <span class="pre">Macro</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:horizontally" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lays out a series of gadgets horizontally.</p>
 <dl class="field-list">
 <dt class="field-odd">Macro Call<span class="colon">:</span></dt>
@@ -1217,7 +1288,7 @@ in the horizontal layout.</p>
 
 <dl class="dylan class">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:[layout]">
-<span class="sig-name descname"><span class="pre">&lt;layout&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[layout]" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">&lt;layout&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[layout]" title="Permalink to this definition">¶</a></dt>
 <dd><p>The superclass class of all layout classes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Superclasses<span class="colon">:</span></dt>
@@ -1276,7 +1347,7 @@ instance, a row layout has a fixed height.</p>
 
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:layout-border">
-<span class="sig-name descname"><span class="pre">layout-border</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:layout-border" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">layout-border</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:layout-border" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the amount of whitespace around the children in a layout.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Signature<span class="colon">:</span></dt>
@@ -1311,7 +1382,7 @@ control of the programmer.</p>
 
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:layout-border-setter">
-<span class="sig-name descname"><span class="pre">layout-border-setter</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:layout-border-setter" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">layout-border-setter</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:layout-border-setter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the amount of whitespace around the children in a layout.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Signature<span class="colon">:</span></dt>
@@ -1349,7 +1420,7 @@ control of the programmer.</p>
 
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:layout-equalize-heights?">
-<span class="sig-name descname"><span class="pre">layout-equalize-heights?</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:layout-equalize-heights?" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">layout-equalize-heights?</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:layout-equalize-heights?" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns true if the children of the specified layout are all the same
 height.</p>
 <dl class="field-list simple">
@@ -1385,7 +1456,7 @@ function.</p>
 
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:layout-equalize-widths?">
-<span class="sig-name descname"><span class="pre">layout-equalize-widths?</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:layout-equalize-widths?" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">layout-equalize-widths?</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:layout-equalize-widths?" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns true if the children of the specified layout are all the same
 width.</p>
 <dl class="field-list simple">
@@ -1421,7 +1492,7 @@ function.</p>
 
 <dl class="dylan class">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:[leaf-pane]">
-<span class="sig-name descname"><span class="pre">&lt;leaf-pane&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[leaf-pane]" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">&lt;leaf-pane&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[leaf-pane]" title="Permalink to this definition">¶</a></dt>
 <dd><p>The class of leaf panes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Superclasses<span class="colon">:</span></dt>
@@ -1446,7 +1517,7 @@ sheet tree that obeys the layout protocols.</p>
 
 <dl class="dylan method">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:make([space-requirement])">
-<span class="sig-name descname"><span class="pre">make(&lt;space-requirement&gt;)</span></span> <em class="property"><span class="pre">Method</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:make([space-requirement])" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">make(&lt;space-requirement&gt;)</span></span> <em class="property"><span class="pre">Method</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:make([space-requirement])" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of <a class="reference internal" href="#duim-layouts:duim-layouts:[space-requirement]"><code class="xref dylan dylan-class docutils literal notranslate"><span class="pre">&lt;space-requirement&gt;</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Signature<span class="colon">:</span></dt>
@@ -1488,7 +1559,7 @@ control the width and height of a layout under various circumstances. See
 
 <dl class="dylan class">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:[multiple-child-composite-pane]">
-<span class="sig-name descname"><span class="pre">&lt;multiple-child-composite-pane&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[multiple-child-composite-pane]" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">&lt;multiple-child-composite-pane&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[multiple-child-composite-pane]" title="Permalink to this definition">¶</a></dt>
 <dd><p>The class of composite panes that can have multiple children.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Superclasses<span class="colon">:</span></dt>
@@ -1510,7 +1581,7 @@ one child.</p>
 
 <dl class="dylan class">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:[null-pane]">
-<span class="sig-name descname"><span class="pre">&lt;null-pane&gt;</span></span> <em class="property"><span class="pre">Instantiable</span> <span class="pre">Sealed</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[null-pane]" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">&lt;null-pane&gt;</span></span> <em class="property"><span class="pre">Instantiable</span> <span class="pre">Sealed</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[null-pane]" title="Permalink to this definition">¶</a></dt>
 <dd><p>The class of null panes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Superclasses<span class="colon">:</span></dt>
@@ -1532,7 +1603,7 @@ need to “fill space” somewhere in a complex layout.</p>
 
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:pane-display-function">
-<span class="sig-name descname"><span class="pre">pane-display-function</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:pane-display-function" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">pane-display-function</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:pane-display-function" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the function used to display the specified pane.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Signature<span class="colon">:</span></dt>
@@ -1566,7 +1637,7 @@ returned by <em>pane-display-function</em> is the value of the
 
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:pane-layout">
-<span class="sig-name descname"><span class="pre">pane-layout</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:pane-layout" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">pane-layout</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:pane-layout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the layout that contains the specified pane in <a class="reference internal" href="#duim-layouts:duim-layouts:definepane"><code class="xref dylan dylan-macro docutils literal notranslate"><span class="pre">define</span> <span class="pre">pane</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Signature<span class="colon">:</span></dt>
@@ -1596,7 +1667,7 @@ returned by <em>pane-display-function</em> is the value of the
 
 <dl class="dylan class">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:[pinboard-layout]">
-<span class="sig-name descname"><span class="pre">&lt;pinboard-layout&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Instantiable</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[pinboard-layout]" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">&lt;pinboard-layout&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Instantiable</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[pinboard-layout]" title="Permalink to this definition">¶</a></dt>
 <dd><p>The class of pinboard layouts.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Superclasses<span class="colon">:</span></dt>
@@ -1617,7 +1688,7 @@ of them.</p>
 <figure class="align-center" id="id4">
 <img alt="../_images/layouts-6.png" src="../_images/layouts-6.png" />
 <figcaption>
-<p><span class="caption-text">Three buttons arranged in a pinboard layout</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Three buttons arranged in a pinboard layout</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>A pinboard layout leaves the subsequent positions of any children placed
@@ -1646,7 +1717,7 @@ a window on screen).</p>
 
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:relayout-children">
-<span class="sig-name descname"><span class="pre">relayout-children</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:relayout-children" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">relayout-children</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:relayout-children" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lays out the children of the specified sheet again.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Signature<span class="colon">:</span></dt>
@@ -1672,7 +1743,7 @@ a window on screen).</p>
 
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:relayout-parent">
-<span class="sig-name descname"><span class="pre">relayout-parent</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:relayout-parent" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">relayout-parent</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:relayout-parent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lays out the parent of the specified sheet again.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Signature<span class="colon">:</span></dt>
@@ -1701,7 +1772,7 @@ dimensions.</p>
 
 <dl class="dylan class">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:[row-layout]">
-<span class="sig-name descname"><span class="pre">&lt;row-layout&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Instantiable</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[row-layout]" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">&lt;row-layout&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Instantiable</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[row-layout]" title="Permalink to this definition">¶</a></dt>
 <dd><p>The class of row layouts.</p>
 <dl class="field-list">
 <dt class="field-odd">Superclasses<span class="colon">:</span></dt>
@@ -1726,7 +1797,7 @@ the specified parameters.</p>
 <figure class="align-center" id="id5">
 <img alt="../_images/layouts-7.png" src="../_images/layouts-7.png" />
 <figcaption>
-<p><span class="caption-text">Three buttons arranged in a row layout</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Three buttons arranged in a row layout</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>The <code class="docutils literal notranslate"><span class="pre">border:</span></code> init-keyword provides a border of whitespace around the
@@ -1784,7 +1855,7 @@ horizontal space, as shown in the diagram below.</p>
 
 <dl class="dylan class">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:[simple-pane]">
-<span class="sig-name descname"><span class="pre">&lt;simple-pane&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Instantiable</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[simple-pane]" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">&lt;simple-pane&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Instantiable</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[simple-pane]" title="Permalink to this definition">¶</a></dt>
 <dd><p>The class of simple panes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Superclasses<span class="colon">:</span></dt>
@@ -1815,7 +1886,7 @@ the pane. This gets called by the <a class="reference internal" href="sheets.htm
 
 <dl class="dylan class">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:[single-child-composite-pane]">
-<span class="sig-name descname"><span class="pre">&lt;single-child-composite-pane&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[single-child-composite-pane]" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">&lt;single-child-composite-pane&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[single-child-composite-pane]" title="Permalink to this definition">¶</a></dt>
 <dd><p>The class of composite panes that can only have one child.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Superclasses<span class="colon">:</span></dt>
@@ -1835,7 +1906,7 @@ the pane. This gets called by the <a class="reference internal" href="sheets.htm
 
 <dl class="dylan class">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:[space-requirement]">
-<span class="sig-name descname"><span class="pre">&lt;space-requirement&gt;</span></span> <em class="property"><span class="pre">Abstract</span> <span class="pre">Instantiable</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[space-requirement]" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">&lt;space-requirement&gt;</span></span> <em class="property"><span class="pre">Abstract</span> <span class="pre">Instantiable</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[space-requirement]" title="Permalink to this definition">¶</a></dt>
 <dd><p>The class of all space requirement objects.</p>
 <dl class="field-list">
 <dt class="field-odd">Superclasses<span class="colon">:</span></dt>
@@ -1922,7 +1993,7 @@ class in a layout.</p>
 
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:space-requirement?">
-<span class="sig-name descname"><span class="pre">space-requirement?</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:space-requirement?" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">space-requirement?</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:space-requirement?" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns true if the specified object is a space requirement.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Signature<span class="colon">:</span></dt>
@@ -1952,7 +2023,7 @@ class in a layout.</p>
 
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:space-requirement-height">
-<span class="sig-name descname"><span class="pre">space-requirement-height</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:space-requirement-height" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">space-requirement-height</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:space-requirement-height" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the preferred height of the specified space requirement.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Signature<span class="colon">:</span></dt>
@@ -1985,7 +2056,7 @@ class in a layout.</p>
 
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:space-requirement-max-height">
-<span class="sig-name descname"><span class="pre">space-requirement-max-height</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:space-requirement-max-height" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">space-requirement-max-height</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:space-requirement-max-height" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the maximum allowed height of the specified space requirement.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Signature<span class="colon">:</span></dt>
@@ -2019,7 +2090,7 @@ created.</p>
 
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:space-requirement-max-width">
-<span class="sig-name descname"><span class="pre">space-requirement-max-width</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:space-requirement-max-width" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">space-requirement-max-width</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:space-requirement-max-width" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the maximum allowed width of the specified space requirement.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Signature<span class="colon">:</span></dt>
@@ -2053,7 +2124,7 @@ created.</p>
 
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:space-requirement-min-height">
-<span class="sig-name descname"><span class="pre">space-requirement-min-height</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:space-requirement-min-height" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">space-requirement-min-height</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:space-requirement-min-height" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the minimum allowed height of the specified space requirement.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Signature<span class="colon">:</span></dt>
@@ -2087,7 +2158,7 @@ created.</p>
 
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:space-requirement-min-width">
-<span class="sig-name descname"><span class="pre">space-requirement-min-width</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:space-requirement-min-width" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">space-requirement-min-width</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:space-requirement-min-width" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the minimum allowed width of the specified space requirement.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Signature<span class="colon">:</span></dt>
@@ -2121,7 +2192,7 @@ created.</p>
 
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:space-requirement-width">
-<span class="sig-name descname"><span class="pre">space-requirement-width</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:space-requirement-width" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">space-requirement-width</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:space-requirement-width" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the preferred width of the specified space requirement.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Signature<span class="colon">:</span></dt>
@@ -2154,7 +2225,7 @@ created.</p>
 
 <dl class="dylan class">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:[stack-layout]">
-<span class="sig-name descname"><span class="pre">&lt;stack-layout&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Instantiable</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[stack-layout]" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">&lt;stack-layout&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Instantiable</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[stack-layout]" title="Permalink to this definition">¶</a></dt>
 <dd><p>The class of stack layouts.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Superclasses<span class="colon">:</span></dt>
@@ -2201,7 +2272,7 @@ specified, then the first page in the stack layout is mapped.</p>
 
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:stack-layout-mapped-page">
-<span class="sig-name descname"><span class="pre">stack-layout-mapped-page</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:stack-layout-mapped-page" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">stack-layout-mapped-page</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:stack-layout-mapped-page" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the currently mapped page for a stack layout.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Signature<span class="colon">:</span></dt>
@@ -2225,7 +2296,7 @@ specified, then the first page in the stack layout is mapped.</p>
 
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:stack-layout-mapped-page-setter">
-<span class="sig-name descname"><span class="pre">stack-layout-mapped-page-setter</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:stack-layout-mapped-page-setter" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">stack-layout-mapped-page-setter</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:stack-layout-mapped-page-setter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the mapped page for a stack layout.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Signature<span class="colon">:</span></dt>
@@ -2250,7 +2321,7 @@ specified, then the first page in the stack layout is mapped.</p>
 
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:table-contents">
-<span class="sig-name descname"><span class="pre">table-contents</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:table-contents" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">table-contents</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:table-contents" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the contents of the specified table.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Signature<span class="colon">:</span></dt>
@@ -2280,7 +2351,7 @@ specified, then the first page in the stack layout is mapped.</p>
 
 <dl class="dylan generic-function">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:table-contents-setter">
-<span class="sig-name descname"><span class="pre">table-contents-setter</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:table-contents-setter" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">table-contents-setter</span></span> <em class="property"><span class="pre">Generic</span> <span class="pre">function</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:table-contents-setter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the contents of the specified table.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Signature<span class="colon">:</span></dt>
@@ -2311,7 +2382,7 @@ specified, then the first page in the stack layout is mapped.</p>
 
 <dl class="dylan class">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:[table-layout]">
-<span class="sig-name descname"><span class="pre">&lt;table-layout&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Instantiable</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[table-layout]" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">&lt;table-layout&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Instantiable</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[table-layout]" title="Permalink to this definition">¶</a></dt>
 <dd><p>The class of table layouts.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Superclasses<span class="colon">:</span></dt>
@@ -2428,7 +2499,7 @@ center, using the <code class="docutils literal notranslate"><span class="pre">y
 
 <dl class="dylan macro">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:tabling">
-<span class="sig-name descname"><span class="pre">tabling</span></span> <em class="property"><span class="pre">Statement</span> <span class="pre">Macro</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:tabling" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">tabling</span></span> <em class="property"><span class="pre">Statement</span> <span class="pre">Macro</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:tabling" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lays out a series of gadgets in a table.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Macro Call<span class="colon">:</span></dt>
@@ -2465,7 +2536,7 @@ in the vertical layout.</p>
 
 <dl class="dylan class">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:[top-level-sheet]">
-<span class="sig-name descname"><span class="pre">&lt;top-level-sheet&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Instantiable</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[top-level-sheet]" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">&lt;top-level-sheet&gt;</span></span> <em class="property"><span class="pre">Open</span> <span class="pre">Abstract</span> <span class="pre">Instantiable</span> <span class="pre">Class</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:[top-level-sheet]" title="Permalink to this definition">¶</a></dt>
 <dd><p>The class of top level sheets.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Superclasses<span class="colon">:</span></dt>
@@ -2495,7 +2566,7 @@ window system object.</p>
 
 <dl class="dylan macro">
 <dt class="sig sig-object dylan-api dylan" id="duim-layouts:duim-layouts:vertically">
-<span class="sig-name descname"><span class="pre">vertically</span></span> <em class="property"><span class="pre">Statement</span> <span class="pre">Macro</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:vertically" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">vertically</span></span> <em class="property"><span class="pre">Statement</span> <span class="pre">Macro</span></em><a class="headerlink" href="#duim-layouts:duim-layouts:vertically" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lays out a series of gadgets vertically.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Macro Call<span class="colon">:</span></dt>
@@ -2572,7 +2643,7 @@ in the vertical layout.</p>
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2011-2023, Dylan Hackers
+                Copyright &#169; 2011-2024, Dylan Hackers
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
@@ -2617,9 +2688,11 @@ in the vertical layout.</p>
       
     </aside>
   </div>
-</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=2df60dd4"></script>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=13c31088"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
-    <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=35a8b989"></script>
     </body>
 </html>
