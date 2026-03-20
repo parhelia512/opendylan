@@ -140,8 +140,10 @@ define function user-root-path()
           as(<directory-locator>, appdata);
         end;
       end;
-    subdirectory-locator(path | home-directory() | temp-directory(), "Open-Dylan")
+    subdirectory-locator(path | home-directory() | temp-directory(),
+                         build-root-directory-name())
   else
-    subdirectory-locator(working-directory(), "_build")
+    subdirectory-locator(working-directory(),
+                         build-root-directory-name())
   end
 end;

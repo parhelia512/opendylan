@@ -44,6 +44,7 @@ define module build-system
     build-system-variable,
 
     $build-system-makefile-name,
+    build-root-directory-name,
 
     target-platform-name,
 

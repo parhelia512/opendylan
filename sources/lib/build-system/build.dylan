@@ -11,6 +11,14 @@ define constant $build-log-file = "build.log";
 define constant $platform-variable = "OPEN_DYLAN_TARGET_PLATFORM";
 define constant $default-platform = $platform-name;
 
+define function build-root-directory-name () => (name :: <string>)
+  if ($os-name == #"win32")
+    "Open-Dylan"
+  else
+    "_build"
+  end
+end function;
+
 define function target-platform-name ()
  => (platform-name :: <symbol>)
   as(<symbol>, environment-variable($platform-variable) | $default-platform)
