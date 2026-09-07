@@ -29,7 +29,7 @@ which is a subclass of :drm:`<object>`. They are shown in the following figure:
 
    The class hierarchy for DUIM-DCs
 
-- :class:`<pen>` This is protocol class for pens. A pen is used to
+- :class:`<pen>` The protocol class for pens. A pen is used to
   draw one-dimensional graphics such as lines or outline, using a
   specific color or pattern.
 - :class:`<brush>` The protocol class for brushes. Brushes are used to fill in

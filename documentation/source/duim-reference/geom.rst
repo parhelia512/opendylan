@@ -45,7 +45,7 @@ although the DUIM-Extended-Geometry library exposes some subclasses of
 .. figure:: images/geom-region.svg
    :align: center
 
-   The <region> class and its subclasses
+   The ``<region>`` class and its subclasses
 
 - :class:`<region>` This class is used to represent any set of points.
   The :class:`<region>` class includes both bounded regions (that is, regions
@@ -73,7 +73,7 @@ shown are subclasses of the :drm:`<error>` class. Note that the subclasses of
 .. figure:: images/geom-transform-error.svg
    :align: center
 
-   The <transform-error> class and its subclasses
+   The ``<transform-error>`` class and its subclasses
 
 - :class:`<transform-error>` The superclass of all error conditions signalled
   when there is an error with a transform.
